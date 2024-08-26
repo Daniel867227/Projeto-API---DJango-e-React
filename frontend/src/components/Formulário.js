@@ -74,7 +74,7 @@ const customTheme = (outerTheme) =>
     },
   });
 
-export default function Formulario({mylabel1, mylabel2, mylabel3, text, myfunction, onChange1, onChange2, onChange3}) {
+export default function Formulario({mylabel1, mylabel2, mylabel3, text, myfunction, onChange1, onChange2, onChange3, list}) {
   const outerTheme = useTheme();
 
 
@@ -94,7 +94,14 @@ export default function Formulario({mylabel1, mylabel2, mylabel3, text, myfuncti
             <ThemeProvider theme={customTheme(outerTheme)}>
                 <TextField label={mylabel1} onChange={onChange1} />
                 <TextField label={mylabel2} onChange={onChange2}/>
-                <Button sx= {{top:'8px', left:'8px'}} type='submit' variant="contained" color="success">Enviar</Button>
+
+                <select style={{height:'55px'}} onChange={onChange3}>
+                  <option value=''>SELECIONE VENDEDOR</option>
+                  {list.map((item)=>
+                      <option key={item.id} value={item.id}>{item.nome}</option>
+                  )}
+                </select>
+                <Button sx= {{top:'2px', left:'8px'}} type='submit' variant="contained" color="success">Enviar</Button>
             </ThemeProvider>
         </form>
 
