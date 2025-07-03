@@ -1,11 +1,12 @@
-import '../App.css';
+import NavBar from "../components/NavBar";
 
 function App() {
   
   return (
-      <div>
-        Home
-      </div>
+    <div>
+      <NavBar/>
+      <h1 style={{textAlign:'center'}}>Olá Seja bem vindo! </h1>
+    </div>
   );
 }
 
