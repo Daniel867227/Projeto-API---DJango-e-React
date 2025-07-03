@@ -12,11 +12,7 @@ function NovosProdutos(){
     const [Vendedor, SetVendedor] = useState('')
 
 
-    const EnviarDados = async (e)=>{
-
-        e.preventDefault()
-
-        console.log('clicou')
+    const EnviarDados = async ()=>{
         
         const response = await axios.post('')
         .then( res => {
