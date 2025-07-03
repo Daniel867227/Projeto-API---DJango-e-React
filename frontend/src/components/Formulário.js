@@ -94,8 +94,7 @@ export default function Formulario({mylabel1, mylabel2, mylabel3, text, myfuncti
             <ThemeProvider theme={customTheme(outerTheme)}>
                 <TextField label={mylabel1} onChange={onChange1} />
                 <TextField label={mylabel2} onChange={onChange2}/>
-                <TextField label={mylabel3} onChange={onChange3}/>
-                <Button variant="contained" color="success">Enviar</Button>
+                <Button sx= {{top:'8px', left:'8px'}} type='submit' variant="contained" color="success">Enviar</Button>
             </ThemeProvider>
         </form>
 
