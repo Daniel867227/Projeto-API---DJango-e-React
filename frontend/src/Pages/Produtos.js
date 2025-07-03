@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import NavBar from "../components/NavBar"
-import TabelaArray from "../components/TabelaArray"
 import axios from "axios"
 
 
@@ -28,7 +27,7 @@ function Produtos(){
     return(
         <div>
             <NavBar/>
-            <TabelaArray/>
+           
         </div>
     )
 }
